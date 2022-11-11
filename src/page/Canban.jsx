@@ -1,42 +1,10 @@
 import React from 'react'
 import './canban.css'
+import { bdResponse } from '../BdResponse';
 
-const bdResponse = [
-  {
-    status: 'Backlog',
-    id: '1',
-    name: 'TestTT',
-    description: 'descriptiondescriptiondescription'
-  }, {
-    status: 'Backlog',
-    id: '2',
-    name: 'TestTT222',
-    description: 'descriptiondescriptiondescription222'
-  },
-  {
-    status: 'In progress',
-    id: '3',
-    name: 'TestTT3',
-    description: 'descriptiondescriptiondescription3'
-  }, {
-    status: 'Finished',
-    id: '4',
-    name: 'TestTT4',
-    description: 'descriptiondescriptiondescription4'
-  },
-  {
-    status: 'Ready',
-    id: '5',
-    name: 'TestTT5',
-    description: 'descriptiondescriptiondescription5'
-  },
-  {
-    status: 'Backlog',
-    id: '6',
-    name: 'TestTT6',
-    description: 'descriptiondescriptiondescription5'
-  },
-]
+// import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+
 
 export default function Canban() {
   return (
@@ -47,7 +15,7 @@ export default function Canban() {
           {bdResponse.map(item => (
             item.status === 'Backlog' ?
               <div className='item' key={item.id}>
-                <p>{item.name}</p>
+                <Link to={`сards/${item.id}`}><p>{item.name}</p></Link>
                 <p>{item.description}</p>
               </div>
               : ""))}
@@ -58,7 +26,7 @@ export default function Canban() {
           {bdResponse.map(item => (
             item.status === 'Ready' ?
               <div className='item' key={item.id}>
-                <p>{item.name}</p>
+                <Link><p>{item.name}</p></Link>
                 <p>{item.description}</p>
               </div>
               : ""))}
@@ -69,7 +37,7 @@ export default function Canban() {
           {bdResponse.map(item => (
             item.status === 'In progress' ?
               <div className='item' key={item.id}>
-                <p>{item.name}</p>
+                <Link><p>{item.name}</p></Link>
                 <p>{item.description}</p>
               </div>
               : ""))}
@@ -80,7 +48,7 @@ export default function Canban() {
           {bdResponse.map(item => (
             item.status === 'Finished' ?
               <div className='item' key={item.id}>
-                <p>{item.name}</p>
+                <Link><p>{item.name}</p></Link>
                 <p>{item.description}</p>
               </div>
               : ""))}
