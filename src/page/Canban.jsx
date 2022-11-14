@@ -1,8 +1,6 @@
 import React from 'react'
 import './canban.css'
 import { bdResponse } from '../BdResponse';
-
-// import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 
@@ -15,7 +13,7 @@ export default function Canban() {
           {bdResponse.map(item => (
             item.status === 'Backlog' ?
               <div className='item' key={item.id}>
-                <Link to={`сards/${item.id}`}><p>{item.name}</p></Link>
+                <Link to={`task/${item.id}`}><p>{item.name}</p></Link>
                 <p>{item.description}</p>
               </div>
               : ""))}

@@ -1,12 +1,11 @@
 import Canban from "./page/Canban";
 import Footer from "./components/Footer"
 import Header from "./components/Header"
-import Cards from './page/Cards'
+import Task from './page/Task'
 import NotFound from './page/NotFound'
 import "./app.css"
 
 import { Routes, Route } from 'react-router-dom';
-
 
 function App() {
   return (
@@ -14,7 +13,7 @@ function App() {
       <Header />
       <Routes>
         <Route path='/' element={<Canban />} />
-        <Route path='/сards/id' element={<Cards />} />
+        <Route path='/task/:id' element={<Task />} />
         <Route path='*' element={<NotFound />} />
       </Routes>
       <Footer />
