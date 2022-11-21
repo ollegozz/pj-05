@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import { bdResponse } from '../BdResponse';
+import { bdResponse } from '../../BdResponse';
 import { useParams } from 'react-router-dom';
-import NotFound from './NotFound';
+import NotFound from '../NotFound/NotFound';
 
 const Task = () => {
   const { id } = useParams()
