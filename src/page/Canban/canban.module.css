@@ -10,7 +10,6 @@ p {
 .cardItem {
     display: flex;
     flex-wrap: wrap;
-    height: 540px;
     background: #0079BF;
 }
 
@@ -24,6 +23,8 @@ p {
     margin: 20px 12px;
     border-radius: 10px;
     max-width: 23%;
+    height: 540px;
+    overflow-y: auto
 }
 
 
@@ -33,6 +34,8 @@ p {
     margin: 20px 12px;
     border-radius: 10px;
     max-width: 23%;
+    height: 540px;
+    overflow-y: auto
 }
 
 .card_progress {
@@ -41,6 +44,8 @@ p {
     margin: 20px 12px;
     border-radius: 10px;
     max-width: 23%;
+    height: 540px;
+    overflow-y: auto
 }
 
 .card_ready {
@@ -49,6 +54,8 @@ p {
     margin: 20px 12px;
     border-radius: 10px;
     max-width: 23%;
+    height: 540px;
+    overflow-y: auto
 }
 
 .item {

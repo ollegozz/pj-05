@@ -1,10 +1,12 @@
 import React from 'react'
 import Tasks from '../../components/Tasks/'
+import Input from '../../components/Input/Input'
 import css from './canban.module.css'
+
 
 export default function Canban() {
 
-  
+
   return (
     <div className={css.cards}>
 
@@ -12,7 +14,8 @@ export default function Canban() {
         <div className={css.card_backlog}>
           <p className={css.taskName}>Backlog</p>
           <Tasks statusTask='Backlog' />
-          <button>+ Add card</button>
+          <Input />
+          {/* <button>+ Add card</button> */} 
         </div>
 
         <div className={css.card_ready}>
