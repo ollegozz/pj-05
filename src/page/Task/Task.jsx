@@ -9,9 +9,10 @@ const Task = () => {
 
   useEffect(() => {
     bdResponse.map((item) => {
-      if (item.id === id) {
+      // eslint-disable-next-line
+      if (item.id == id) {
         setTaskItem(item)
-      } return true
+      } return true 
     })
   }, [id])
 

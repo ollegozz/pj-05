@@ -9,7 +9,6 @@ p {
 
 .cardItem {
     display: flex;
-    flex-wrap: wrap;
     background: #0079BF;
 }
 
@@ -22,7 +21,6 @@ p {
     background-color: #EBECF0;
     margin: 20px 12px;
     border-radius: 10px;
-    max-width: 23%;
     height: 540px;
     overflow-y: auto
 }
@@ -33,7 +31,6 @@ p {
     background-color: #EBECF0;
     margin: 20px 12px;
     border-radius: 10px;
-    max-width: 23%;
     height: 540px;
     overflow-y: auto
 }
@@ -43,7 +40,6 @@ p {
     background-color: #EBECF0;
     margin: 20px 12px;
     border-radius: 10px;
-    max-width: 23%;
     height: 540px;
     overflow-y: auto
 }
@@ -53,10 +49,10 @@ p {
     background-color: #EBECF0;
     margin: 20px 12px;
     border-radius: 10px;
-    max-width: 23%;
     height: 540px;
     overflow-y: auto
 }
+
 
 .item {
     border: 1px solid black;
@@ -64,4 +60,53 @@ p {
     display: block;
     margin: 15px;
     background: #EBECF0;
+}
+
+@media (max-width: 912px) {
+    .cardItem {
+        flex-wrap: wrap;
+    }
+
+    .card_backlog {
+        flex: 0 1 50%;
+        max-width: 46%;
+    }
+
+    .card_finished {
+        flex: 0 1 50%;
+        max-width: 46%;
+    }
+
+    .card_progress {
+        flex: 0 1 50%;
+        max-width: 46%;
+    }
+
+    .card_ready {
+        flex: 0 1 50%;
+        max-width: 46%;
+    }
+}
+
+@media (max-width: 610px) {
+
+    .card_backlog {
+        flex: 0 1 100%;
+        max-width: 100%;
+    }
+
+    .card_finished {
+        flex: 0 1 100%;
+        max-width: 100%;
+    }
+
+    .card_progress {
+        flex: 0 1 100%;
+        max-width: 100%;
+    }
+
+    .card_ready {
+        flex: 0 1 100%;
+        max-width: 100%;
+    }
 }

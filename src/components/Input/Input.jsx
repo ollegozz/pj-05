@@ -1,34 +1,17 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { bdResponse } from '../../BdResponse';
+import Button from '../Button/Button';
 
-export default function Input() {
 
-    const [inputValue, setInputValue] = useState('')
+export default function Input(props) {
 
-    useEffect(() => {
-
-    }, [bdResponse])
-
-    function send(e) {
-        e.preventDefault()
-        bdResponse.push({
-            status: 'Backlog',
-            id: bdResponse.length + 1,
-            name: inputValue,
-            description: ''
-        })
-        setInputValue('')
-    }
-
-    console.log(bdResponse);
+    // const [mosk, setMosk] = useState(props.mosk)
+    // const { mosk } = props
+    // const [inputValue, setInputValue] = useState('')
 
     return (
-
-        <form action="submit">
-            <input type="text" placeholder='задача'
-                onChange={e => setInputValue(e.target.value)}
-                value={inputValue} />
-            <button type='submit' onClick={send}>Submit</button>
-        </form>
+        <input {...props}>
+        
+        </input>        
     )
 }
