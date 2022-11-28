@@ -3,12 +3,13 @@ import { bdResponse } from '../../BdResponse';
 import { useParams } from 'react-router-dom';
 import NotFound from '../NotFound/NotFound';
 
-const Task = () => {
+const Task = (props) => {
+  const { mosk } = props
   const { id } = useParams()
   const [taskItem, setTaskItem] = useState([])
 
   useEffect(() => {
-    bdResponse.map((item) => {
+    mosk.map((item) => {
       // eslint-disable-next-line
       if (item.id == id) {
         setTaskItem(item)
