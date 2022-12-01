@@ -22,6 +22,7 @@ const Task = (props) => {
       <div>
         <h2>{taskItem.name}</h2>
         <p>{taskItem.description}</p>
+        <p>{taskItem.status}</p>
         <button>Edit</button>
       </div>
       : <NotFound />

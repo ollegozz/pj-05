@@ -4,11 +4,11 @@ import css from './canban.module.css'
 // import { bdResponse } from '../../BdResponse';
 import Button from '../../components/Button/Button';
 import Input from '../../components/Input/Input';
+import Select from '../../components/Select/select';
 
 
 export default function Canban(props) {
   const { mosk, setMosk } = props
-  // const [mosk, setMosk] = useState(bdResponse)
   const [inputTaskName, setInputTaskName] = useState('')
   const [openForm, setOpenForm] = useState(false)
   const [formValid, setFormValid] = useState(true)
@@ -40,7 +40,18 @@ export default function Canban(props) {
       setInputTaskName('')
       openCreateTask()
     }
+  }
 
+  function changeTask(e) {
+    setMosk(mosk.map(item => {
+      if (item.id == e) {
+        return { ...item, status: 'Ready' };
+      } else {
+        return { ...mosk, ...item };
+      }
+    }    
+    ))
+    openCreateTask()
   }
 
   return (
@@ -49,10 +60,9 @@ export default function Canban(props) {
       <div className={css.cardItem}>
         <div className={css.card_backlog}>
           <p className={css.taskName}>Backlog</p>
-          <Tasks statusTask='Backlog' mosk={mosk}/>
+          <Tasks statusTask='Backlog' mosk={mosk} />
           {openForm ? <Button onClick={addTask}>Submit</Button> :
             <Button onClick={openCreateTask} >+ Add card</Button>}
-
           {openForm &&
             <Input placeholder='Create'
               value={inputTaskName}
@@ -62,6 +72,10 @@ export default function Canban(props) {
         <div className={css.card_ready}>
           <p className={css.taskName}>Ready</p>
           <Tasks statusTask='Ready' mosk={mosk} />
+          {openForm ? '' :
+            <Button onClick={openCreateTask} >+ Add card</Button>}
+          {openForm &&
+            <Select statusTask='Backlog' mosk={mosk} onChange={changeTask}></Select>}
         </div>
 
         <div className={css.card_progress}>

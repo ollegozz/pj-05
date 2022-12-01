@@ -6,7 +6,6 @@ import Task from './page/Task/Task'
 import NotFound from './page/NotFound/NotFound'
 import "./app.css"
 import { bdResponse } from './BdResponse'
-
 import { Routes, Route } from 'react-router-dom';
 
 function App() {

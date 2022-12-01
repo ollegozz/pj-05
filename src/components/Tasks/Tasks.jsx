@@ -7,7 +7,7 @@ import css from './tasks.module.css'
 
 export default function Tasks(props) {
     const { statusTask, mosk } = props
-    
+
 
     return (
         <div>
@@ -19,14 +19,6 @@ export default function Tasks(props) {
                         </Link>
                     </div> : ''
             ))}
-            {/* {openForm ? <Button onClick={addTask}>Submit</Button> :
-                <Button onClick={openCreateTask} >+ Add card</Button>}
-
-            {openForm &&
-                <Input placeholder='Create'
-                    value={inputTaskName}
-                    onChange={e => setInputTaskName(e.target.value)} />} */}
-
         </div>
     )
 }
