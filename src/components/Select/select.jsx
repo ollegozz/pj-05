@@ -1,19 +1,20 @@
 import React from 'react'
+import css from './select.module.css'
 
-const Select = ({ mosk, statusTask, value, onChange }) => {
+const Select = ({ mosk, statusTask, onChange }) => {
 
     return (
-        <select
-            // value={value}
+        <select className={css.select}
             onChange={e => onChange(e.target.value)}
         >
-            <option></option>
+            <option className={css.option}></option>
             {mosk.map(option => (
                 statusTask === option.status &&
-                <option key={option.id}
+                <option
+                    className={css.option}
+                    key={option.id}
                     value={option.id}
-                    name={option.name}
-                    >
+                >
                     {option.name}
                 </option>
 

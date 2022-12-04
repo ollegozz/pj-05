@@ -1,12 +1,10 @@
-import React, { useState } from 'react'
-import { bdResponse } from '../../BdResponse';
-import Button from '../Button/Button';
-
+import React from 'react'
+import css from './input.module.css'
 
 export default function Input(props) {
 
     return (
-        <input {...props}>
+        <input className={css.input} {...props}>
         
         </input>        
     )

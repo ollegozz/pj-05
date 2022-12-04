@@ -12,3 +12,7 @@ a {
     margin: 0 auto;
     align-items: center;
 }
+
+input {
+    outline: none;
+}

@@ -1,9 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import css from './tasks.module.css'
-// import Input from '../Input/Input';
-// import Button from '../Button/Button';
-// import { bdResponse } from '../../BdResponse';
 
 export default function Tasks(props) {
     const { statusTask, mosk } = props

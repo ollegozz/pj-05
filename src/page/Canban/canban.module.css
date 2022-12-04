@@ -9,8 +9,14 @@ p {
 
 .cardItem {
     display: flex;
-    background: #0079BF;
+    background: #0079BF;    
 }
+
+.cardItem p {
+    overflow: hidden;
+    margin-right: 5px;
+}
+
 
 .taskName {
     font-size: 18px;
@@ -22,7 +28,7 @@ p {
     margin: 20px 12px;
     border-radius: 10px;
     height: 540px;
-    overflow-y: auto
+    overflow-y: auto;
 }
 
 
@@ -109,4 +115,8 @@ p {
         flex: 0 1 100%;
         max-width: 100%;
     }
+}
+
+.active {
+    color: blueviolet;
 }

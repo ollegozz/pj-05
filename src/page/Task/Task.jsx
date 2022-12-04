@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react'
-import { bdResponse } from '../../BdResponse';
 import { useParams } from 'react-router-dom';
 import NotFound from '../NotFound/NotFound';
+import css from './task.module.css'
+import Button from '../../components/Button/Button';
+import { Link } from 'react-router-dom';
 
 const Task = (props) => {
   const { mosk } = props
@@ -15,16 +17,31 @@ const Task = (props) => {
         setTaskItem(item)
       } return true 
     })
-  }, [id])
+  }, [mosk, id])
+
+  
 
   return (
     taskItem.length !== 0 && taskItem !== 0 ?
-      <div>
-        <h2>{taskItem.name}</h2>
-        <p>{taskItem.description}</p>
-        <p>{taskItem.status}</p>
-        <button>Edit</button>
+
+      <div className={css.body}>
+        <div className={css.task}>
+          <div className={css.title}>
+            <div className={css.name}>{taskItem.name}</div>
+            <div className={css.close}><Link to={`/`}>&#10006;</Link></div>
+          </div>
+          
+          {/* <p className={css.status}>Статус задачи: {taskItem.status}</p> */}
+          <p className={css.description}>{taskItem.description}</p>
+          
+
+          <Button>Редактировать</Button>
+        </div>
+
       </div>
+      
+
+
       : <NotFound />
   )
 }
