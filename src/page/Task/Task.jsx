@@ -9,6 +9,7 @@ const Task = (props) => {
   const { mosk } = props
   const { id } = useParams()
   const [taskItem, setTaskItem] = useState([])
+  
 
   useEffect(() => {
     mosk.map((item) => {
