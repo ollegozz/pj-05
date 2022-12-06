@@ -14,7 +14,7 @@ export default function Footer(props) {
       const lenghtFin = mosk.filter(task => task.status === 'Finished')
       setTaskFinished(Object.values(lenghtFin).length)
       const lenghtAct = mosk.filter(task => task.status !== 'Finished')
-      setTaskActive(Object.values(lenghtAct).length)
+      setTaskActive(Object.values(lenghtAct).length -1)
     })
 
   })
