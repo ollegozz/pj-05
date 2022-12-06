@@ -5,8 +5,8 @@ import css from "./footer.module.css"
 export default function Footer(props) {
   const {mosk} = props
 
-  const [taskFinished, setTaskFinished] = useState()
-  const [taskActive, setTaskActive] = useState()
+  const [taskFinished, setTaskFinished] = useState(0)
+  const [taskActive, setTaskActive] = useState(0)
 
   useEffect(() => {
     // eslint-disable-next-line

@@ -5,12 +5,13 @@ import Header from "./components/Header/Header"
 import Task from './page/Task/Task'
 import NotFound from './page/NotFound/NotFound'
 import "./app.css"
-import { bdResponse } from './BdResponse'
+// import { bdResponse } from './BdResponse'
 import { Routes, Route } from 'react-router-dom';
 
 function App() {
 
-  const initialState = JSON.parse(window.localStorage.getItem('mosk')) || bdResponse
+  const initialState = JSON.parse(window.localStorage.getItem('mosk')) || [0]
+  // const initialState = JSON.parse(window.localStorage.getItem('mosk')) || bdResponse
   const [mosk, setMosk] = useState(initialState)
   const [drop, setDrop] = useState(false)
 
