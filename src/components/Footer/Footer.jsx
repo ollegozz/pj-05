@@ -21,12 +21,12 @@ export default function Footer(props) {
 
   return (
     
-    <div className={css.footer}>
+    <footer className={css.footer}>
       <div className={css.tasks}>
         <div className={css.active}>Active tasks: {taskActive}</div>
         <div className={css.finished}>Finished tasks: {taskFinished}</div>
       </div>
       <div className={css.dev}>Kanban board by aom 2022</div>
-    </div>
+    </footer>
   )
 }

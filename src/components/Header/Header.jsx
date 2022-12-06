@@ -10,7 +10,7 @@ export default function Header(props) {
 
   return (
     <>
-      <div className={css.header}>
+      <header className={css.header}>
         <div className={css.title}><Link to={`./`}>Awesome Kanban Board</Link></div>
         <div className={css.user}>
           <div className={css.user__logo}>
@@ -30,7 +30,7 @@ export default function Header(props) {
             }
           </div>
         </div>
-      </div>
+      </header>
     </>
   )
 }
