@@ -30,12 +30,12 @@ function App() {
   
   return (
 
-    <div className="main">
+    <div className="body">
       <div className="_container" >
         <Header drop={drop} dropMenu={dropMenu} />
         <Routes>
           <Route path='/' element={<Canban mosk={mosk} setMosk={setMosk} />} />
-          <Route path='/task/:id' element={<Task mosk={mosk} />} />
+          <Route path='/task/:id' element={<Task mosk={mosk} setMosk={setMosk} />} />
           <Route path='*' element={<NotFound />} />
         </Routes>
         <Footer mosk={mosk}/>

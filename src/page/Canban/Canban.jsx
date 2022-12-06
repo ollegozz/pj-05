@@ -75,9 +75,7 @@ export default function Canban(props) {
       }
     }
     ))
-  }
-
-  
+  }  
 
    return (
     <div className={css.cards}>

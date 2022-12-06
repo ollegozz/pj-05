@@ -37,3 +37,10 @@
     font-size: 18px;
 }
 
+.input {
+    border: none;
+    border-bottom: 1px solid black;
+    font-size: 18px;
+    width: 90%;
+    font-family: inherit;
+}
